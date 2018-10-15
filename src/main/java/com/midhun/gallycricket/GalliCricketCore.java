@@ -17,6 +17,10 @@ public class GalliCricketCore {
 	 * 
 	 */
 	public static void main( String[] args ){
+		
+		//opening input scanner from console
+		Scanner scanner = new Scanner(System.in); 
+		
 		System.out.println("-------------------------- Galli Cricket -----------------------\n");
 		
     	System.out.println("Program would have input as Number of balls bowled followed by \nEither run scored for each ball or it would be “W” if batsmen gets out for a ball. \n");
@@ -29,12 +33,12 @@ public class GalliCricketCore {
     	System.out.println("############################################################### \n");
     	
     	while (true) {
-    		Integer numberOfBalls=getNumberOfBalls();
+    		Integer numberOfBalls=readNumberOfBalls(scanner);
         	System.out.println("Enter Runs Scored By each Ball");
-        	runCalculater(numberOfBalls);   
+        	runCalculater(numberOfBalls,scanner);   
         	
         	System.out.println("Press 'Y' If You want to contine .......");
-        	Scanner scanner = new Scanner(System.in); 
+        	
         	String input = scanner.nextLine();
         	 if(input.equals("y")||input.equals("Y")) {
         		 System.out.println("\nStating new team Scoreboard ...");
@@ -42,19 +46,20 @@ public class GalliCricketCore {
              }else {
             	 System.out.println("\nApp Closed ...");
             	 break;
-             }
-        	
+             }        	
 			
 		}
-    	  
-		
+    	 
+    	//Closing Scanner 
+    	scanner.close();
     }
 
 	/**
 	 * 
 	 * @param numberOfBalls
+	 * @param scanner 
 	 */
-	private static void runCalculater(Integer numberOfBalls) {		
+	private static void runCalculater(Integer numberOfBalls, Scanner scanner) {		
 		
 		// TotalRun is used to find final score
 		int totalRun 	= 0;
@@ -63,10 +68,10 @@ public class GalliCricketCore {
 		
 		for(int index=1;index<=numberOfBalls;index++) {
 			
-			int currentRun = readRun();
-			if(prevRun ==0 && currentRun ==0) {
+			int currentRun = readRun(scanner);
+			if(prevRun == 0 && currentRun == 0) {
 				totalRun -= 2;
-				 currentRun=1;
+				currentRun= 1;
 			}else {
 				totalRun += currentRun;	
 			}
@@ -83,13 +88,14 @@ public class GalliCricketCore {
 	 * if input is 'w' or 'W' it will return -2 .
 	 * if run between 0 and 6 it will return run .
 	 * Any other in put other than w or 0-6 it will ask re-enter a valid run 
+	 * @param scanner 
 	 * @return {@link Integer} run scored in each ball 
 	 */
-	private static int readRun() {
-		Scanner scan = new Scanner(System.in); 
+	private static int readRun(Scanner scanner) {
+		
 		while (true) {
 	         try {                                
-	             String input=scan.nextLine();
+	             String input=scanner.nextLine();
 	             if(input.equals("w")||input.equals("W")) {
 	            	 return -2;
 	             }else {	            	 
@@ -104,9 +110,7 @@ public class GalliCricketCore {
 	             }
 	         } catch (Exception e) {
 	             System.out.println("Enter a valid run 0-6 or W (for wicket) ");
-	         }finally {
-				
-			}
+	         }
 		}
 	}
 
@@ -115,21 +119,19 @@ public class GalliCricketCore {
 	 * This method will read how many balls one team can face.
 	 * It will read from console reach a valid number .
 	 * If input is not valid number it will ask  until a valid input come.
+	 * @param scanner 
 	 * 
 	 * @return {@link Integer} number of balls
 	 */
-	private static Integer getNumberOfBalls() {
+	private static Integer readNumberOfBalls(Scanner scanner) {
 		
 		 System.out.println( "Enter Number of Balls You Want to play :- " );
-	     Scanner scan = new Scanner(System.in); 
 	     while (true) {
 	         try {                                
-	             return Integer.valueOf(scan.nextLine());
-	         } catch (Exception e) {
-	             System.out.println("Enter a valid number");
-	         }finally {
-				
-			}
+	        	return Integer.valueOf(scanner.nextLine());
+	         } catch (Exception e) {	        	 
+	            System.out.println("Enter a valid number");
+	         }
 	     }
 	}
 }
