@@ -28,4 +28,7 @@ Program would have input as Number of balls bowled followed by either run scored
 
 #Screen shots 
 
-![Alt text](/GalliCricket/screenshots/1 step.PNG?raw=true "Optional Title")
+#installing code 
+
+![Installing Code](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/1%20step.PNG?raw=true "Optional Title")
+![Running code ](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/exe.PNG?raw=true "Optional Title")
