@@ -10,7 +10,7 @@ rules:
   
 Program would have input as Number of balls bowled followed by either run scored for each ball or it would be “W” if batsmen gets out for a ball. 
 
-##Steps for Installing 
+## Steps for Installing 
 
 ```
  git clone https://github.com/midhunpottmmal/GalliCricket.git
