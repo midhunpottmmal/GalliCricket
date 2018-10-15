@@ -25,10 +25,22 @@ Program would have input as Number of balls bowled followed by either run scored
 ```
  mvn exec:java
 ```
+---
 
-#Screen shots 
+### Screen shots 
 
-#installing code 
+### installing code 
 
 ![Installing Code](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/1%20step.PNG?raw=true "Optional Title")
 ![Running code ](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/exe.PNG?raw=true "Optional Title")
+
+---
+
+### Out Put ScreenShots
+
+![Installing Code](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/screeen%20shot%201.PNG?raw=true?raw=true "Optional Title")
+![Running code ](https://raw.githubusercontent.com/midhunpottmmal/GalliCricket/master/screenshots/screen%202.PNG?raw=true?raw=true "Optional Title")
+
+---
+
+
