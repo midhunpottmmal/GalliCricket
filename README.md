@@ -25,3 +25,7 @@ Program would have input as Number of balls bowled followed by either run scored
 ```
  mvn exec:java
 ```
+
+#Screen shots 
+
+![Alt text](/GalliCricket/screenshots/1 step.PNG?raw=true "Optional Title")
